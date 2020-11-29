@@ -1,0 +1,12 @@
+[submodule "eleventy"]
+	path = eleventy
+	url = https://github.com/asteriskdigital/gs-eleventy
+[submodule "hugo"]
+	path = hugo
+	url = https://github.com/asteriskdigital/gs-hugo
+[submodule "jekyll"]
+	path = jekyll
+	url = https://github.com/asteriskdigital/gs-jekyll
+[submodule "gatsby"]
+	path = gatsby
+	url = https://github.com/asteriskdigital/gs-gatsby
