@@ -10,3 +10,6 @@
 [submodule "gatsby"]
 	path = gatsby
 	url = https://github.com/asteriskdigital/gs-gatsby
+[submodule "reference"]
+	path = reference
+	url = https://github.com/asteriskdigital/gs-reference
