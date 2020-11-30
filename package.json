@@ -17,7 +17,7 @@
     "hugo": "cd hugo && hugo -d ../build/hugo",
 
        "build:jekyll": "cd jekyll && jekyll build",
-       "local:jekyll": "npm run build:jekyll",
+       "local:jekyll": "npm run build:jekyll && npm run copy:jekyll",
         "copy:jekyll": "cp -r ./jekyll/_site ./build/jekyll",
              "jekyll": "jekyll build",
 
