@@ -1,0 +1,37 @@
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "scripts": {
+    "prebuild:eleventy": "cd eleventy && npm install",
+       "build:eleventy": "cd eleventy && ./node_modules/.bin/eleventy",
+       "local:eleventy": "npm run build:eleventy",
+        "copy:eleventy": "cp -r ./eleventy/_site ./build/eleventy",
+             "eleventy": "npm run prebuild:eleventy && npm run build:eleventy",
+
+    "prebuild:gatsby": "cd gatsby && npm install",
+       "build:gatsby": "cd gatsby && npm run build",
+       "local:gatsby": "npm run build:gatsby && npm run copy:gatsby",
+        "copy:gatsby": "cp -r ./gatsby/public ./build/gatsby",
+             "gatsby": "npm run prebuild:gatsby && npm run build:gatsby && copy:gatsby",
+    
+    "hugo": "cd hugo && hugo -d ../build/hugo",
+
+       "build:jekyll": "cd jekyll && jekyll build",
+       "local:jekyll": "npm run build:jekyll",
+        "copy:jekyll": "cp -r ./jekyll/_site ./build/jekyll",
+             "jekyll": "jekyll build",
+
+    "reference" : "cp -r ./reference ./build/reference",
+
+    "clean": "./node_modules/.bin/del-cli build",
+
+    "build:local": "npm run clean && npm run local:eleventy && npm run local:jekyll && npm run local:gatsby && npm run hugo && npm run reference"
+
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bulma": "^0.9.1",
+    "del-cli": "^3.0.1"
+  }
+}
