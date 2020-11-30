@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{{site.Title}}</title>
+
+    {{ $styles := resources.Get "styles/main.scss" | toCSS }}
+
+    <link rel="stylesheet" href="{{ $styles.Permalink }}">
+    
+  </head>
+  <body>
+    <section class="section">
+        <div class="container content">
+            {{ .Content }}
+        </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Getting Started: SSG Demos"
+
+
+disableKinds = ["section", "page", "taxonomy", "term"]
+
+
+
+[module]
+
+
+[[module.mounts]]
+  source = "node_modules/bulma"
+  target = "assets/styles/bulma"
+
+[[module.mounts]]
+  source = "build"
+  target = "static"
+
+[[module.mounts]]
+  source = "static"
+  target = "static"
+
+[[module.mounts]]
+  source = "assets"
+  target = "assets"
+
+[[module.mounts]]
+  source = "content"
+  target = "content"
