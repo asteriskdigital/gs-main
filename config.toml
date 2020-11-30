@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "https://keen-fermat-20dd14.netlify.app/"
 languageCode = "en-us"
 title = "Getting Started: SSG Demos"
 

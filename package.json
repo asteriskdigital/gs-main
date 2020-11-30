@@ -14,7 +14,7 @@
         "copy:gatsby": "cp -r ./gatsby/public ./build/gatsby",
              "gatsby": "npm run prebuild:gatsby && npm run build:gatsby && copy:gatsby",
     
-    "hugo": "cd hugo && hugo -d ../build/hugo",
+    "hugo": "cd hugo && hugo -d ../build/hugo -b /hugo/",
 
        "build:jekyll": "cd jekyll && jekyll build",
        "local:jekyll": "npm run build:jekyll && npm run copy:jekyll",
@@ -25,7 +25,10 @@
 
     "clean": "./node_modules/.bin/del-cli build",
 
-    "build:local": "npm run clean && npm run local:eleventy && npm run local:jekyll && npm run local:gatsby && npm run hugo && npm run reference"
+    "build:local": "npm run clean && npm run local:eleventy && npm run local:jekyll && npm run local:gatsby && npm run hugo && npm run reference",
+
+    "prebuild:prod": "npm install",
+       "build:prod": "npm run prebuild:prod && npm run clean && npm run eleventy && npm run jekyll && npm run gatsby && npm run hugo && npm run reference && hugo"
 
   },
   "author": "",
