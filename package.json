@@ -14,7 +14,7 @@
         "copy:gatsby": "cp -r ./gatsby/public ./build/gatsby",
              "gatsby": "npm run prebuild:gatsby && npm run build:gatsby && copy:gatsby",
     
-    "hugo": "cd hugo && hugo -d ../build/hugo -b /hugo/",
+    "hugo": "cd hugo && hugo -d ../build/hugo ",
 
        "build:jekyll": "cd jekyll && jekyll build",
        "local:jekyll": "npm run build:jekyll && npm run copy:jekyll",
